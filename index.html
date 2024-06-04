@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemple MyFile</title>
+</head>
+<body></body>
+<!-- Import Axios -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<!-- Import myFile -->
+<script type="module">
+    import myFile from './myFile.js';
+    window.myFile = myFile;
+</script>
+<!-- make download -->
+<script>
+
+    let url = '/img.jpg';
+    axios.get(url, {
+        responseType: 'blob',
+    })
+    .then(blob => myFile.download(blob, 'myFile.png'))
+    .catch(error => console.log(error))
+
+</script>
+
+</html>
