@@ -57,9 +57,9 @@ Ao trabalhar no frontend pode ser que você se depare com a necessidade de reali
 O método `download(blob, fileName)` aceita dois parâmetros, sendo o segundo opcional. O módulo myFile extrai o nome do arquivo a partir do cabeçalho da resposta (response header) do blob, que é passado como primeiro parâmetro. Para que essa informação seja obtida automaticamente, o backend deve incluir o seguinte cabeçalhos na resposta:
 
 
-|      |  | 
+|  Content-Disposition    | attachment; filename="filename.jpg" | 
 | :---        |    ---:   |  
-| Content-Disposition     | attachment; filename="filename.jpg" | 
+
 
 
 ## TROUBLESHOOTING
